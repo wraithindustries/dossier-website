@@ -9,7 +9,7 @@ metadata:
   title:
     default: Dossier
     template: '%s — Dossier'
-  description: ""
+  description: ''
   robots:
     index: true
     follow: true

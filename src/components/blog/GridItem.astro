@@ -54,17 +54,10 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
         ))
     }
   </div>
-  
+
   <div class="mt-2">
     <span class="text-sm text-accent uppercase font-bold">
-      {
-        post.category && (
-          <>
-            {' '}
-              {post.category.title}
-          </>
-        )
-      }
+      {post.category && <> {post.category.title}</>}
     </span>
   </div>
 

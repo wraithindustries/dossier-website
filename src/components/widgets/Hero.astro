@@ -80,11 +80,7 @@ const {
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
-                <Image
-                  class="mx-auto rounded-md w-full"
-                  loading="eager"
-                  {...image}
-                />
+                <Image class="mx-auto rounded-md w-full" loading="eager" {...image} />
               )}
             </div>
           )
