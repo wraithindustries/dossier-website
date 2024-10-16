@@ -1,7 +1,7 @@
 ---
-title: 'Dossiers for People'
-excerpt: Create dossiers for each of your contacts to better understand them
-image: https://images.unsplash.com/photo-1561069934-eee225952461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
+title: Relationships
+excerpt: Create relationships between your dossiers
+image: ~/assets/images/relationships.png
 category: standard
 ---
 

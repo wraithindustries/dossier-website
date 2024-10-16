@@ -23,7 +23,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { post } = Astro.props as Props;
 
-const url = getCanonical(getPermalink(post.permalink, 'post'));
+const url = getCanonical(getPermalink(post.permalink, 'feature'));
 const image = (await findImage(post.image)) as ImageMetadata | string | undefined;
 
 const metadata = merge(
@@ -35,7 +35,7 @@ const metadata = merge(
       follow: blogPostRobots?.follow,
     },
     openGraph: {
-      type: 'article',
+      type: 'feature',
       ...(image
         ? { images: [{ url: image, width: (image as ImageMetadata)?.width, height: (image as ImageMetadata)?.height }] }
         : {}),

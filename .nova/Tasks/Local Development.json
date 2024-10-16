@@ -1,0 +1,8 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : "#! \/usr\/bin\/env zsh\n\n  export NVM_DIR=\"$HOME\/.nvm\"\n  [ -s \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\" ] && \\. \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\"  # This loads nvm\n\nnvm use v22.8.0\nnpm run dev"
+    }
+  }
+}
