@@ -1,8 +1,13 @@
 {
   "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "#! \/usr\/bin\/env zsh\n\n export NVM_DIR=\"$HOME\/.nvm\"\n [ -s \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\" ] && \\. \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\"\n\nnvm use\nnpm install"
+    },
     "run" : {
       "enabled" : true,
-      "script" : "#! \/usr\/bin\/env zsh\n\n  export NVM_DIR=\"$HOME\/.nvm\"\n  [ -s \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\" ] && \\. \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\"  # This loads nvm\n\nnvm use v22.8.0\nnpm run dev"
+      "script" : "#! \/usr\/bin\/env zsh\n\n export NVM_DIR=\"$HOME\/.nvm\"\n [ -s \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\" ] && \\. \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\"\n\nnvm use\nnpm run dev",
+      "shell" : "\/opt\/homebrew\/bin\/zsh"
     }
   }
 }
