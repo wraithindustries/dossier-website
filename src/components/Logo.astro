@@ -1,4 +1,4 @@
----
+<!-- ---
 import Image from '~/components/common/Image.astro';
 
 const { image = await Astro.slots.render('image') } = Astro.props;
@@ -14,6 +14,34 @@ const { image = await Astro.slots.render('image') } = Astro.props;
           <Fragment set:html={image} />
         ) : (
           <Image class="mx-auto rounded-md w-full" loading="eager" {...image} />
+        )}
+      </div>
+    )
+  }
+</span> -->
+
+---
+import Image from '~/components/common/Image.astro';
+
+const { image = await Astro.slots.render('image'), darkImage = await Astro.slots.render('darkImage') } = Astro.props;
+---
+
+<span
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+>
+  {
+    (image || darkImage) && (
+      <div class="relative m-auto max-w-5xl">
+        {typeof image === 'string' && typeof darkImage === 'string' ? (
+          <>
+            <Fragment set:html={image} class="block dark:hidden" />
+            <Fragment set:html={darkImage} class="hidden dark:block" />
+          </>
+        ) : (
+          <>
+            <Image class="mx-auto rounded-md w-full block dark:hidden" loading="eager" {...image} />
+            <Image class="mx-auto rounded-md w-full hidden dark:block" loading="eager" {...darkImage} />
+          </>
         )}
       </div>
     )
