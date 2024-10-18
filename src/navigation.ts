@@ -1,5 +1,7 @@
 import { getPermalink, getAsset } from './utils/permalinks';
 
+const year: string = new Date().getFullYear().toString();
+
 export const headerData = {
   links: [
     // {
@@ -17,5 +19,5 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [{ ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') }],
-  footNote: '© 2024 Wraith Industries',
+  footNote: `© ${year} Wraith Industries`,
 };
