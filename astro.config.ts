@@ -24,6 +24,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 export default defineConfig({
   output: 'static',
 
+  site: 'https://getdossier.app',
+
   integrations: [
     tailwind({
       applyBaseStyles: false,

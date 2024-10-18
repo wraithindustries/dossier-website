@@ -2,7 +2,7 @@
   "actions" : {
     "build" : {
       "enabled" : true,
-      "script" : "#! \/usr\/bin\/env zsh\n\n export NVM_DIR=\"$HOME\/.nvm\"\n [ -s \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\" ] && \\. \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\"\n\nnvm use\nnpm install"
+      "script" : "#! \/usr\/bin\/env zsh\n\n export NVM_DIR=\"$HOME\/.nvm\"\n [ -s \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\" ] && \\. \"\/opt\/homebrew\/opt\/nvm\/nvm.sh\"\n\nnvm use\nnpm install\nnpm run build"
     },
     "run" : {
       "enabled" : true,
