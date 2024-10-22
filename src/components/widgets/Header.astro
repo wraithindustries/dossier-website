@@ -55,6 +55,19 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
   {...isSticky ? { 'data-aw-sticky-header': true } : {}}
   {...id ? { id } : {}}
 >
+  <script
+    defer
+    data-domain="getdossier.app"
+    src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"
+  ></script>
+  <script>
+    window.plausible =
+      window.plausible ||
+      function () {
+        (window.plausible.q = window.plausible.q || []).push(arguments);
+      };
+  </script>
+
   <div class="absolute inset-0"></div>
   <div
     class:list={[
@@ -72,8 +85,13 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
   >
     <div class:list={[{ 'mr-auto rtl:mr-0 rtl:ml-auto': position === 'right' }, 'flex justify-between']}>
       <a class="flex items-center" href={getHomePermalink()}>
-        <Logo image={{ src: '~/assets/images/logo.png', alt: 'Dossier Logo' }} />
-        <Logo darkImage={{ src: '~/assets/images/logo-dark-mode.png', alt: 'Dossier Logo' }} />
+        {
+          isDark ? (
+            <Logo image={{ src: '~/assets/images/logo-dark.png', alt: 'Dossier Logo' }} />
+          ) : (
+            <Logo image={{ src: '~/assets/images/logo.png', alt: 'Dossier Logo' }} />
+          )
+        }
       </a>
       <div class="flex items-center md:hidden">
         <ToggleMenu />
