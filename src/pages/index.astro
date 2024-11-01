@@ -12,7 +12,18 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero image={{ src: '~/assets/images/hero-image.png', alt: 'Dossier Hero Image' }}>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get on TestFlight',
+        href: 'https://testflight.apple.com/join/35Jq51Tg',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Dossier Hero Image' }}
+  >
     <Fragment slot="title">
       Manage your relationships with precision, using <span class="text-accent">Dossier</span>!
     </Fragment>
@@ -22,7 +33,6 @@ const metadata = {
       the right information at your fingertips.
     </Fragment>
   </Hero>
-
   <Features
     id="features"
     tagline="Features"
